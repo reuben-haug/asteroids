@@ -47,5 +47,14 @@ pipfile.lock
 .env.test.local
 .env.production.local
 
+# Ignore virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
 # Ignore miscellaneous
 *.DS_Store
