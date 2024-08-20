@@ -4,6 +4,8 @@ from constants import *
 clock = pygame.time.Clock()
 dt = 0
 
+
+
 def main():
     pygame.init()
     print("Starting asteroids!")
