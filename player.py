@@ -9,6 +9,9 @@ class Player(CircleShape):
         self.position = pygame.Vector2(x, y)
         self.rotation = 0
 
+        for group in self.containers:
+            group.add(self)
+
     def draw(self, screen):
         pygame.draw.polygon(screen, (255, 255, 255), self.triangle(), 2)
 
