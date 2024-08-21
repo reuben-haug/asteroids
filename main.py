@@ -13,20 +13,20 @@ def main():
     print("Screen width:", SCREEN_WIDTH)
     print("Screen height:", SCREEN_HEIGHT)
 
-    # 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            
+        # Set frame rate to 60
+        dt = clock.tick(60) / 1000
         
         screen.fill((0, 0, 0))
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
-
-        # Set frame rate to 60
-        dt = clock.tick(60) / 1000
 
 if __name__ == "__main__":
     main()
