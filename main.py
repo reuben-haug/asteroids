@@ -3,6 +3,7 @@ from constants import *
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
+from shot import Shot
 
 clock = pygame.time.Clock()
 dt = 0
@@ -11,11 +12,13 @@ dt = 0
 updateable = pygame.sprite.Group()
 drawable = pygame.sprite.Group()
 asteroid = pygame.sprite.Group()
+shots = pygame.sprite.Group()
 
 # Set containers for each class
 Player.containers = (updateable, drawable)
 Asteroid.containers = (updateable, drawable, asteroid)
 AsteroidField.containers = (updateable)
+Shot.containers = (updateable, drawable, shots)
 
 # Create game objects
 player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
